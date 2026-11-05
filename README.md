@@ -1,15 +1,12 @@
 # web-mapping-starter
 
-Starter packages for the CCE 114 *Web Mapping with AI Experience* assignment
+Starter package for the CCE 114 *Web Mapping with AI Experience* assignment
 (https://byu-hydroinformatics.github.io/cce114-geomatics/assignments/web-mapping-with-ai/).
 
-- `caedm/` : unzip into the `www` folder of a CAEDM home directory
-  (served at `http://www.et.byu.edu/~USERNAME`).
-- `github-pages/` : upload to the root of a public GitHub repo and enable Pages.
-
-Both contain the same `index.html` (MapLibre GL, OpenFreeMap/Carto basemap with light/dark
-styling, map on the left, legend + notes on the right); only the README differs. All paths are
-relative, so the page works from any folder. `./build.sh` checks the two copies match and
-writes `dist/web-map-caedm.zip` and `dist/web-map-github-pages.zip` for students.
-
-Run locally: `./serve.sh --caedm` or `./serve.sh --github` (add `-p PORT` to change the port).
+- `site/` : the package students get. A MapLibre GL page (OpenFreeMap/Carto basemap with
+  light/dark styling): map on the left, legend + notes on the right. All paths are relative,
+  so it works from any folder: unzip into a CAEDM `www` folder
+  (`http://www.et.byu.edu/~USERNAME`) or upload to a GitHub Pages repo. Deploy steps for both
+  are in `site/README.md`.
+- `./build.sh` writes `dist/web-map-starter.zip` for students.
+- `./serve.sh [-p PORT]` serves `site/` locally and opens it in the browser.
