@@ -11,3 +11,5 @@ Both contain the same `index.html` (MapLibre GL, OpenFreeMap/Carto basemap with 
 styling, map on the left, legend + notes on the right); only the README differs. All paths are
 relative, so the page works from any folder. `./build.sh` checks the two copies match and
 writes `dist/web-map-caedm.zip` and `dist/web-map-github-pages.zip` for students.
+
+Run locally: `./serve.sh --caedm` or `./serve.sh --github` (add `-p PORT` to change the port).
