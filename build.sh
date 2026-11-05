@@ -3,6 +3,7 @@
 # Files sit at the TOP LEVEL of each zip so they unzip straight into www/.
 set -e
 cd "$(dirname "$0")"
+cmp caedm/index.html github-pages/index.html || { echo "index.html differs between packages"; exit 1; }
 mkdir -p dist
 rm -f dist/*.zip
 for p in caedm github-pages; do
