@@ -1,5 +1,5 @@
 #!/bin/sh
-# Serve site/ locally and open it in the browser.
+# Serve docs/ locally and open it in the browser.
 # Usage: ./serve.sh [-p|--port N]   (default port 8000)
 cd "$(dirname "$0")"
 port=8000
@@ -11,6 +11,6 @@ while [ $# -gt 0 ]; do
   esac
   shift
 done
-echo "Serving site/ at http://localhost:$port/  (Ctrl-C to stop)"
+echo "Serving docs/ at http://localhost:$port/  (Ctrl-C to stop)"
 ( sleep 1; { open "http://localhost:$port/" || xdg-open "http://localhost:$port/"; } >/dev/null 2>&1 ) &
-exec python3 -m http.server "$port" --directory site
+exec python3 -m http.server "$port" --directory docs

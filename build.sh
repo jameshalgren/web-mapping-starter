@@ -5,5 +5,5 @@ set -e
 cd "$(dirname "$0")"
 mkdir -p dist
 rm -f dist/*.zip
-(cd site && zip -rq ../dist/web-map-starter.zip . -x '.DS_Store')
+(cd docs && zip -rq ../dist/web-map-starter.zip . -x '.DS_Store')
 ls -l dist
